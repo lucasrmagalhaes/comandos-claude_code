@@ -1,0 +1,11 @@
+title: Comandos do Claude Code
+description: Referência consolidada de comandos, atalhos e funcionalidades do Claude Code
+theme: jekyll-theme-cayman
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+exclude:
+  - Gemfile
+  - Gemfile.lock
