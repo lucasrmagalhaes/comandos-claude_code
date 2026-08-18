@@ -41,4 +41,4 @@ claude --version && claude --help
 A pasta `docs/` já está pronta para o Pages (tema `jekyll-theme-cayman`, `docs/_config.yml`).
 Para ligar: **Settings › Pages › Source: Deploy from a branch › Branch: `main` / pasta `/docs`**.
 
-> Pages em repositório **privado** exige GitHub Pro/Team/Enterprise. Em conta Free, ou torne o repositório público, ou use os Markdown direto pelo GitHub (que já renderizam com navegação pelo índice acima).
+> **Status atual**: este repositório é privado e a conta não tem plano com Pages privado — a API do GitHub recusa habilitar (`Your current plan does not support GitHub Pages for this repository`). Para publicar, torne o repositório público ou faça upgrade. Enquanto isso, os Markdown já renderizam direto no GitHub com a navegação do índice acima.
