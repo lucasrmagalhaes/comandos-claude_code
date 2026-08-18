@@ -9,6 +9,7 @@ Referência consolidada de **todos os comandos e funcionalidades do Claude Code*
 
 | Documento | Conteúdo |
 | --- | --- |
+| [Guia do dev](docs/guia-dev.md) | Recorte opinativo: os comandos que mudam o dia a dia + receita de hook rodando formatador em container |
 | [CLI](docs/cli.md) | Subcomandos `claude ...` e todas as flags de linha de comando |
 | [Comandos de barra](docs/slash-commands.md) | Todos os `/comandos` embutidos, aliases e skills bundladas |
 | [Atalhos de teclado](docs/atalhos.md) | Modo interativo, edição de texto, modo Vim, transcript viewer |

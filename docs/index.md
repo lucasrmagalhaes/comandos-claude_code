@@ -6,6 +6,7 @@ Referência consolidada de comandos e funcionalidades do Claude Code.
 
 ## Seções
 
+- **[Guia do dev](guia-dev.md)** — o recorte que muda o dia a dia, e a receita de hook em container
 - **[CLI](cli.md)** — subcomandos `claude ...` e todas as flags
 - **[Comandos de barra](slash-commands.md)** — todos os `/comandos` e skills bundladas
 - **[Atalhos de teclado](atalhos.md)** — modo interativo, edição, Vim, transcript
@@ -18,6 +19,7 @@ Referência consolidada de comandos e funcionalidades do Claude Code.
 
 | Quero... | Vá para |
 | --- | --- |
+| Saber por onde começar | [Guia do dev](guia-dev.md) |
 | Rodar/automatizar do terminal | [CLI](cli.md) |
 | Um comando dentro da sessão | [Comandos de barra](slash-commands.md) |
 | Navegar mais rápido no prompt | [Atalhos](atalhos.md) |
