@@ -51,7 +51,7 @@ O Claude Code muda rápido — este repo tem ferramentas para não apodrecer:
 
 | Ferramenta | O que faz |
 | --- | --- |
-| `tools/check-drift.py` | Compara `docs/slash-commands.md` com a doc oficial; sai com erro listando o que falta. Roda toda segunda via GitHub Actions e abre issue quando há drift |
+| `tools/check-drift.py` | Compara `docs/slash-commands.md` com a doc oficial; sai com erro listando o que falta. Roda toda segunda via GitHub Actions e abre issue quando há drift (arquivo em `tools/drift.workflow.yml` até ser movido para `.github/workflows/`) |
 | `tools/gen-env-vars.py` / `tools/gen-settings-keys.py` | Regeram as páginas de variáveis de ambiente e de chaves do settings a partir da doc oficial |
 | `tools/extract-commands.py` | Extrai o registry de comandos do binário instalado: `strings -n 3 "$(readlink -f "$(which claude)")" \| tools/extract-commands.py` |
 | `tools/dump-cli-help.sh` | Salva o `--help` de todos os subcomandos para diffar entre versões |

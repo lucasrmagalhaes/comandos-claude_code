@@ -1,0 +1,40 @@
+# PENDENTE: mover para .github/workflows/drift.yml
+# (o push exige token gh com escopo 'workflow': gh auth refresh -h github.com -s workflow)
+name: verificar-drift
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comparar com a doc oficial
+        id: check
+        run: |
+          set +e
+          python3 tools/check-drift.py > drift.md
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat drift.md
+      - name: Abrir issue se houver drift
+        if: steps.check.outputs.status == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Drift com a doc oficial ($(date +%Y-%m-%d))"
+          existing=$(gh issue list --state open --search "Drift com a doc oficial in:title" --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file drift.md
+          else
+            gh issue create --title "$title" --body-file drift.md
+          fi
+      - name: Falhar o job se houver drift
+        if: steps.check.outputs.status != '0'
+        run: exit 1
