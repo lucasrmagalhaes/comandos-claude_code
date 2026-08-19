@@ -1,3 +1,8 @@
+---
+title: Ferramentas
+nav_order: 7
+---
+
 # Ferramentas (tools)
 
 [← Voltar ao índice](index.md)
@@ -116,3 +121,7 @@ A coluna **Permissão** indica se a tool pergunta antes de agir no *Manual mode*
 - **Workflow reutilizável baseado em prompt** → escreva uma [skill](funcionalidades.md#skills), que roda pela tool `Skill` em vez de virar uma entrada nova.
 
 Para ver o que está ativo na sua sessão: `/status`.
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._

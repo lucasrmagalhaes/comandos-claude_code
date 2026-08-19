@@ -1,3 +1,8 @@
+---
+title: Funcionalidades
+nav_order: 9
+---
+
 # Funcionalidades
 
 [← Voltar ao índice](index.md)
@@ -187,3 +192,7 @@ Mapa do que o Claude Code oferece além dos comandos. Cada item aponta para a do
 | [Instalação e login](https://code.claude.com/docs/en/troubleshoot-install) | `command not found`, PATH, permissões, rede, autenticação |
 | [Referência de erros](https://code.claude.com/docs/en/errors) | Mensagens de erro em runtime, o que significam e como corrigir |
 | Safe mode | `--safe-mode` sobe com todas as customizações desligadas |
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._

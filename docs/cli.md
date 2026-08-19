@@ -1,3 +1,8 @@
+---
+title: CLI
+nav_order: 5
+---
+
 # CLI — comandos e flags de terminal
 
 [← Voltar ao índice](index.md)
@@ -211,3 +216,7 @@ claude mcp add -e API_KEY=xxx meu-server -- npx meu-mcp-server
 | `--dangerously-load-development-channels` | Habilita canais fora da allowlist (desenvolvimento local) |
 
 > **Removida**: `--enable-auto-mode` foi removida na v2.1.111 (auto mode virou padrão).
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._

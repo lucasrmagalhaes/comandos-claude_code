@@ -1,3 +1,8 @@
+---
+title: Comandos de barra
+nav_order: 4
+---
+
 # Comandos de barra (`/`)
 
 [← Voltar ao índice](index.md)
@@ -37,7 +42,6 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | Comando | Aliases | Descrição |
 | --- | --- | --- |
 | `/teleport` | `/tp` | Puxa uma sessão da web para este terminal |
-| `/web` | — | Continua a sessão atual no claude.ai/code |
 | `/desktop` | `/app` | Continua a sessão atual no Claude Code Desktop |
 | `/mobile` | `/ios`, `/android` | Mostra QR code para baixar o app mobile |
 | `/remote-control [nome]` | `/rc` | Conecta este terminal para sessões de Remote Control |
@@ -65,6 +69,7 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | `/subtask <instrução>` | — | Entrega uma tarefa lateral a um subagent que reporta de volta |
 | `/list-agents` | `/peers` | Lista os subagents e outras sessões do Claude Code que o Claude pode mensagear |
 | `/tasks` | `/bashes` | Lista e gerencia as tarefas em background da sessão |
+| `/workflows` | — | Abre a visão de progresso dos dynamic workflows: acompanhar, pausar, retomar, salvar |
 | `/loops` | — | Lista, cria e apaga *loops* recorrentes e stop-hooks |
 | `/loop [intervalo] [prompt]` | `/proactive` | Roda um prompt repetidamente enquanto a sessão estiver aberta |
 
@@ -80,6 +85,8 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | `/security-review [--fix] [--comment] [path]` | — | Procura vulnerabilidades de segurança no diff |
 | `/simplify [--fix] [path]` | — | Revisa o código alterado por reuso, qualidade e eficiência, e corrige |
 | `/verify` | — | Verifica uma solução no codebase |
+| `/run` | — | **[Skill]** Roda e dirige o app do projeto para ver a mudança funcionando, não só os testes passando |
+| `/run-skill-generator` | — | **[Skill]** Ensina `/run` e `/verify` a buildar, subir e dirigir o app do projeto, escrevendo uma skill por projeto |
 | `/autofix-pr [prompt]` | — | Dispara uma sessão na web que monitora e corrige o PR do branch atual |
 | `/ultrareview [target]` | — | Revisão multi-agente profunda na nuvem, que encontra **e verifica** bugs antes do merge |
 | `/batch <instrução>` | — | Planeja uma mudança em larga escala e executa em paralelo em 5–30 worktrees isolados, cada um abrindo um PR |
@@ -108,6 +115,8 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | `/setup-bedrock` | — | Reconfigura autenticação, região ou pins de modelo do Amazon Bedrock |
 | `/setup-vertex` | — | Reconfigura autenticação, projeto, região ou pins de modelo do Google Cloud |
 | `/fewer-permission-prompts` | — | Varre os transcripts e propõe uma allowlist no `settings.json` para reduzir prompts de permissão |
+| `/import [codex\|gemini] [--dry-run] [--yes]` | — | Traz configuração de outros agentes da máquina (OpenAI Codex, Google Gemini CLI): instruções, servidores MCP etc. |
+| `/scroll-speed` | — | Ajusta a velocidade da roda do mouse (requer fullscreen) |
 
 ## Extensões
 
@@ -116,6 +125,7 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | `/mcp [reconnect <s>\|enable\|disable [<s>\|all]]` | — | Gerencia conexões e OAuth de servidores MCP |
 | `/plugin [subcomando]` | `/plugins`, `/marketplace` | Gerencia plugins e marketplaces |
 | `/reload-plugins [--force]` | — | Ativa mudanças pendentes de plugin na sessão atual |
+| `/reload-skills` | — | Re-escaneia os diretórios de skills/commands para pegar mudanças em disco sem reiniciar |
 | `/skills` | — | Lista as skills disponíveis |
 | `/chrome` | — | Configurações do Claude in Chrome |
 | `/ide [open]` | — | Gerencia integrações de IDE e mostra o status |
@@ -129,7 +139,6 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | `/help` | — | Ajuda e comandos disponíveis |
 | `/status` | — | Status da sessão: versão, modelo, conta, conectividade de API, tools |
 | `/usage` | `/cost`, `/stats` | Custo da sessão, uso do plano e estatísticas de atividade |
-| `/whoami` | — | Mostra o nome da conta logada |
 | `/login` | — | Entra na conta Anthropic (ou troca de conta) |
 | `/logout` | — | Sai da conta |
 | `/doctor` | `/checkup` | Checkup de instalação e settings, com correções |
@@ -140,7 +149,8 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | `/extra-usage` | — | Configura uso extra para continuar trabalhando ao bater o limite |
 | `/passes` | — | Compartilha uma semana grátis de Claude Code com amigos |
 | `/release-notes` | — | Changelog em um seletor interativo de versões |
-| `/feedback [relato]` | `/bug` | Envia feedback sobre o Claude Code |
+| `/feedback [relato]` | `/bug`, `/share` | Envia feedback, reporta bug ou compartilha a conversa (com tela de consentimento antes de enviar) |
+| `/usage-credits` | — | Configura créditos de uso, ou pede ao admin, quando bate o limite |
 | `/exit` | `/quit` | Sai da CLI |
 
 ## Aprendizado e extras
@@ -154,7 +164,7 @@ Digite `/` no início do prompt para abrir o menu de comandos e skills. `/help` 
 | `/claude-api [migrate\|managed-agents-onboard\|prompt-audit]` | — | Carrega material de referência da Claude API e Managed Agents |
 | `/dataviz [pedido]` | — | Orientação de design para gráficos, dashboards e visualizações |
 | `/deep-research <pergunta>` | — | **[Workflow]** Dispara buscas na web em paralelo, cruza fontes e sintetiza um relatório com citações |
-| `/schedule` | — | Cria/atualiza/lista *routines* (agentes na nuvem em cron) |
+| `/schedule [descrição]` | `/routines` | Cria/atualiza/lista *routines* (agentes na nuvem em cron) |
 | `/radio` | — | Abre a rádio lo-fi Claude FM |
 | `/stickers` | — | Pede adesivos do Claude Code |
 
@@ -207,4 +217,15 @@ Comandos presentes no binário local que **não** aparecem na tabela pública de
 | `/heapdump` | Diagnóstico: escreve um snapshot do heap JS em `~/Desktop` |
 | `/stub` | Placeholder interno, não invocável |
 
-E o inverso também vale: comandos documentados como `/cd`, `/whoami`, `/web`, `/subtask`, `/list-agents`, `/verify`, `/design-login` e `/design-sync` **não existem** na 2.1.136 — chegaram em versões posteriores. Rode `claude update` e confira com `/help`.
+E o inverso também vale: comandos documentados como `/cd`, `/subtask`, `/list-agents`, `/verify`, `/run`, `/import` e `/design-sync` **não existem** na 2.1.136 — chegaram em versões posteriores. Rode `claude update` e confira com `/help`.
+
+## Removidos do produto
+
+| Comando | Status |
+| --- | --- |
+| `/pr-comments [PR]` | Removido na v2.1.91 — peça direto ao Claude para ver os comentários do PR |
+| `/vim` | Removido na v2.1.92 — alterne o modo de edição em `/config` → Editor mode |
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._

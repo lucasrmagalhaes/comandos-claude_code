@@ -1,3 +1,8 @@
+---
+title: Atalhos
+nav_order: 6
+---
+
 # Atalhos de teclado e modo interativo
 
 [← Voltar ao índice](index.md)
@@ -164,3 +169,7 @@ Habilite pelo `/config` ou pelas settings. `/keybindings` permite customizar qua
 | `J` | Junta as linhas selecionadas |
 | `o` | Troca cursor e âncora |
 | `v` / `V` | Alterna entre char-wise e line-wise, ou sai |
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._

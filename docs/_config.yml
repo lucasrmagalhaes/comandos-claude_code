@@ -1,11 +1,14 @@
 title: Comandos do Claude Code
 description: Referência consolidada de comandos, atalhos e funcionalidades do Claude Code
-theme: jekyll-theme-cayman
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+search_enabled: true
+heading_anchors: true
+color_scheme: light
+aux_links:
+  GitHub: https://github.com/lucasrmagalhaes/comandos-claude_code
+footer_content: 'Verificado contra o binário 2.1.136 e a documentação oficial de 19/08/2026 · conteúdo baseado na <a href="https://code.claude.com/docs">doc oficial do Claude Code</a>'
 exclude:
   - Gemfile
   - Gemfile.lock

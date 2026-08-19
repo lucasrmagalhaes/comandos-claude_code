@@ -1,3 +1,8 @@
+---
+title: Hooks
+nav_order: 8
+---
+
 # Hooks
 
 [← Voltar ao índice](index.md)
@@ -189,3 +194,7 @@ A saída de texto da tool é interpretada como o stdout de um hook `command`. Se
 ```json
 { "disableAllHooks": true }
 ```
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._

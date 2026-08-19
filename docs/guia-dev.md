@@ -1,3 +1,8 @@
+---
+title: Guia do dev
+nav_order: 3
+---
+
 # Guia do dev — o que realmente muda o dia a dia
 
 [← Voltar ao índice](index.md)
@@ -155,3 +160,7 @@ jq -r '.permissions.allow[]? | select(test("docker"))' .claude/settings.local.js
 ### Nota sobre quando o hook carrega
 
 Hooks vêm das settings do **diretório do projeto da sessão**. Uma sessão aberta em outra pasta não enxerga o hook, mesmo que o arquivo exista no disco. E o watcher de settings só observa diretórios que já tinham arquivo de settings quando a sessão começou — ao criar o hook pela primeira vez, abra o `/hooks` uma vez (recarrega a config) ou reinicie a sessão.
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._

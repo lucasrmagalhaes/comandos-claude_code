@@ -1,3 +1,8 @@
+---
+title: Configuração
+nav_order: 10
+---
+
 # Configuração
 
 [← Voltar ao índice](index.md)
@@ -109,3 +114,7 @@ Dentro da sessão:
 | `/mcp` | Servidores MCP e seu estado de conexão |
 | `/skills` | Skills disponíveis |
 | `/doctor` | Checkup de instalação e settings |
+
+---
+
+_Verificado contra o binário `2.1.136` e a documentação oficial de 19/08/2026._
